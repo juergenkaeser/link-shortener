@@ -27,7 +27,9 @@
           this.shortenedUrl = data.result.short_link          
           navigator.clipboard.writeText(this.shortenedUrl).then()
         } catch (error) {
-          console.error(error);
+          this.shortenedUrl = ''
+          console.error(error)
+          window.alert('Something went wrong.')
         }
       }
     }
